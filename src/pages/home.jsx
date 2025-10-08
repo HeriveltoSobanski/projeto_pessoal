@@ -1,0 +1,26 @@
+import React, { useState } from "react";
+import ConverterCard from "../components/ConverterCard";
+
+export default function Home() {
+  const [type, setType] = useState("moeda");
+
+  return (
+    <div className="home-container">
+      <h1>Conversor Universal 🌎</h1>
+
+      <select
+        value={type}
+        onChange={(e) => setType(e.target.value)}
+        className="select-type"
+      >
+        <option value="moeda">Moeda</option>
+        <option value="temperatura">Temperatura</option>
+        <option value="distancia">Distância</option>
+        <option value="peso">Peso</option>
+        <option value="tempo">Tempo</option>
+      </select>
+
+      <ConverterCard type={type} />
+    </div>
+  );
+}

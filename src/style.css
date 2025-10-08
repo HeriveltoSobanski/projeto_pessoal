@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: orange;
+  padding: 20px;
+}
+
+.home-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.home-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.select-type {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.unit-row {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.unit-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.unit-label {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: left;
+}
+
+.unit-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s ease;
+}
+
+.unit-select:focus {
+  border-color: #ff9800;
+}
+
+.swap-btn {
+  align-self: center;
+  margin-top: 20px;
+  padding: 10px 12px;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.swap-btn:hover {
+  background: #ffeb3b;
+}
+
+.converter-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: border 0.2s ease;
+}
+
+.converter-card input:focus {
+  border-color: #ff9800;
+}
+
+.converter-card button {
+  background: linear-gradient(to right, #ff9800, #ffb300);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.converter-card button:hover {
+  background: linear-gradient(to right, #f57c00, #ffa726);
+}
+
+.resultado {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.resultado span {
+  font-weight: bold;
+  color: #f57c00;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .unit-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .swap-btn {
+    margin-top: 5px;
+    align-self: center;
+    width: 50px;
+  }
+}
